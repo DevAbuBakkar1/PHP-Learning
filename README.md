@@ -42,4 +42,28 @@ line two
 line three
 and more .......
 */
+```
+### 3.Echo :
+```php
+$var = "shohan";
+$var2 = "abu bakkar";
+echo "first varible is ".$var." and second variable is ".$var2."\n";
+echo "first variable is {$var} and second variable is {$var2} \n";
+printf("first variable is %s and second variable is %s \n",strtoupper($var) ,$var2);
+```
+### 3. + _ * / :
+```php 
+$number = 12;
+$number = $number +3;
+echo $number;
+echo "\n";
 
+$number1 = 14;
+$number1 -= 5;
+echo $number1; 
+echo "\n";
+
+$number2 = 30*300;
+$number3 = $number2 / (32+550);
+echo $number3;
+```
