@@ -15,8 +15,6 @@ Variable output ways :
 //to separate onle line to another we can use :here we must use double quotation .
 echo  "\n"; 
 ```
-
-
 ### 1.2 variable : 
 Variable output ways : constant variable will be in capital letter so that it can easily identified as constant
 
@@ -92,7 +90,6 @@ $m = ++$n;
 $n = $n+1; // 11
 $m = $n; //11
 */
-
 ```
 ### 1.6 Topic :  printf() and sprintf() ; 
 ```php
