@@ -94,7 +94,7 @@ $m = $n; //11
 */
 
 ```
-### 1.6 Topic :  printf 
+### 1.6 Topic :  printf() and sprintf() ; 
 ```php
 $fName  = "abu" ;
 $midName = "bakkar";
@@ -135,4 +135,8 @@ result :
 1243.34 
 0034.45 
 */
+$firstName = "abu";
+$lastName = "bakkar";
+$output = sprintf("His name is %s %s", $firstName, $lastName);//sprintf() return the valus into his variable
+echo $output;
 ```
