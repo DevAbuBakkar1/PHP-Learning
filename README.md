@@ -30,7 +30,7 @@ echo $var;
 $var = "this is abu Bakkar";
 echo $var;
 ```
-### 2.comments 
+### 1.3 comments 
 Single and multiple comment syntex
 ```PHP
 // This is single line comment 
@@ -43,7 +43,7 @@ line three
 and more .......
 */
 ```
-### 3.Echo :
+### 1.4 Echo :
 ```php
 $var = "shohan";
 $var2 = "abu bakkar";
@@ -51,7 +51,7 @@ echo "first varible is ".$var." and second variable is ".$var2."\n";
 echo "first variable is {$var} and second variable is {$var2} \n";
 printf("first variable is %s and second variable is %s \n",strtoupper($var) ,$var2);
 ```
-### 3. + _ * / :
+### 1.5  + _ * / :
 ```php 
 $number = 12;
 $number = $number +3;
@@ -66,4 +66,13 @@ echo "\n";
 $number2 = 30*300;
 $number3 = $number2 / (32+550);
 echo $number3;
+
+$x = $z = 5;
+echo $x ."\n".$z ."\n"; // both variable's value are 5;
+
+$x = 8;
+$y = $z = $x;
+echo $y."\n".$z; // both variable's value are 5;
 ```
+
+
