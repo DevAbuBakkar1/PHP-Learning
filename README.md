@@ -268,22 +268,6 @@ if(12 == $marks){
 echo "\n";
 print ($marks == 40) ? "pass" :  "fail";
 ```
-### 1.6 Topic : Ternary 
-```php
-$marks = 10;
-if(12 == $marks){
-    echo "twelve";
-}elseif (10 == $marks) {
-   echo "ten";
-}else{
-    echo"this is an unknown number";
-}
-echo "\n";
-
-
-print ($marks == 40) ? "pass" :  "fail";
-echo "\n";
-```
 ### 1.9 Topic PHP Switch 
 Use of Switch case :
 ```PHP
