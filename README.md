@@ -332,3 +332,56 @@ $str = "8balls";
  }
  // result : Eight balls 
  ```
+ ### 1.10 PHP operator Precidence
+ ```php
+ $d = true || false;
+ $f = false or true;
+ var_dump($d, $f);
+ //result : bool(true)  bool(false)
+
+ $b = true && false ;
+ $c = true and false;
+ var_dump($b,$c);
+ //result : bool(false)  bool(true)
+ ```
+### 1.11 Topic : Control Stracture Alternative Syntex :
+```php
+$s = 12;
+if ( $s%2 == 0 ){
+    echo "even Number";
+}else{
+    echo "Odd Number";
+}
+//result : even Number
+echo PHP_EOL;
+
+if ($s%2 == 0) :
+    echo "even number";
+else : 
+    echo "odd Number";   
+endif;
+// Result : even number
+
+echo PHP_EOL;
+switch ( $s % 2 == 0 ) :
+    case 0 :
+    echo "even Number";
+    break;
+    default :
+    echo "Odd Number";
+endswitch;
+//Result : Odd Number
+
+if($s % 2 == 0) :
+?>
+even number 
+some text 
+<?php
+else :
+?>
+odd Number 
+some text++
+<?php
+endif;
+// result : even number some text 
+```
