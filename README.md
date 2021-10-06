@@ -267,6 +267,10 @@ if(12 == $marks){
 }
 echo "\n";
 print ($marks == 40) ? "pass" :  "fail";
+
+$z = 10;
+$result = ($z % 2 == 0) ? "A" : (($z == 11)? "B" : "c");
+echo $result;
 ```
 ### 1.9 Topic PHP Switch 
 Use of Switch case :
