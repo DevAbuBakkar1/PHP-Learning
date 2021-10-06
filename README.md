@@ -255,7 +255,7 @@ if($condtion1 && $condtion2 && $condtion3){
 }
 echo "\n";
 ```
-### 1.8 Topic : Ternary 
+### 1.8 Topic : Ternary Operator
 ```php
 $marks = 10;
 if(12 == $marks){
@@ -267,4 +267,69 @@ if(12 == $marks){
 }
 echo "\n";
 print ($marks == 40) ? "pass" :  "fail";
+```
+### 1.6 Topic : Ternary 
+```php
+$marks = 10;
+if(12 == $marks){
+    echo "twelve";
+}elseif (10 == $marks) {
+   echo "ten";
+}else{
+    echo"this is an unknown number";
+}
+echo "\n";
+
+
+print ($marks == 40) ? "pass" :  "fail";
+echo "\n";
+```
+### 1.9 Topic PHP Switch 
+Use of Switch case :
+```PHP
+ $n = 12;
+ $r = $n % 2;
+  switch ($r){
+      case 0 : 
+        echo "{$n} is an even number";
+        break;
+    default :
+    echo "{$n} is an odd number";
+  }
+  //result : 12 is an even number
+  echo "\n";
+  ```
+Use of Multiple Case :
+```php
+$color  = "red";
+switch($color){
+    case "red" :
+        echo "{$color} is my favorite color";
+        break;
+    case "green" :
+        echo "{$color} is my favorite color";
+        break;
+    case "blue":
+        echo "{$color} is not my Favorite color ";
+        break;
+    default :
+        echo "{$color} is an unknown color";
+}
+//result : red is my favorite color
+```
+Use of ucwords() funtion and advanced Case 
+```php
+$color  = "green";
+switch($color){
+    case "red"  :
+    case "green":
+        echo ucwords($color)." is my favorite color";
+        break;
+    case "blue":
+        echo "{$color} is not my Favorite color ";
+        break;
+    default :
+        echo "{$color} is an unknown color";
+}
+// result : Green is my favorite color
 ```
