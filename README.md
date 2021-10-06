@@ -317,3 +317,18 @@ switch($color){
 }
 // result : Green is my favorite color
 ```
+Mixed Value in switch case  :
+```PHP
+$str = "8balls";
+ switch($str){
+    case (string) "9balls" :
+         echo "nine balls";
+        break;
+    case (string) "8balls" :
+        echo "Eight balls";
+        break;
+    default       :
+        echo "No Balls";
+ }
+ // result : Eight balls 
+ ```
