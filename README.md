@@ -137,3 +137,134 @@ $lastName = "bakkar";
 $output = sprintf("His name is %s %s", $firstName, $lastName);//sprintf() return the valus into his variable
 echo $output;
 ```
+### 1.7 Topic If else and Logical Operator 
+use of if else :
+```php
+$n = 12 ;
+$y = 12;
+if($n == $y ){
+    echo "$n is equal $y";
+}else{
+    echo "$n is not equal $y ";
+}
+//result : 12 is equal 12
+```
+Odd Even logic : 
+```php
+$n = 12 ;
+if($n % 2 == 0 ){
+    echo"$n is an even number";
+}else{
+    echo "$n is an odd number";
+}
+// result : 12 is an even number
+```
+if else Logic : 
+```php
+$sal = "1200";
+$rahim = "343";
+if ($sal == $rahim ){
+    echo "$sal and $rahim are in the same position";
+}elseif($sal >= $rahim){
+    echo "$sal is the boss of $rahim";  
+}elseif( $sal == $rahim ){
+    echo "$sal is the servent of $rahim";
+}
+//result : 1200 is the boss of 343
+echo "\n";
+
+$age = 14;
+if ($age >= 13 && $age<= 19){
+    echo "He is a tineger";
+}else{
+    echo "He is not a tineger";
+}
+//result: He is a tineger
+echo "\n";
+
+
+$food = "salmon";
+if( "tuna" == $food || "salmon" == $food ){
+    echo "{$food} has vitamin D";
+}elseif( "apple" == $food ){
+    echo "apple doesn't conatain vitamin D ";
+}else{
+    echo "we dont know about this food";
+}
+echo "\n";
+//result : salmon has vitamin D
+```
+Leap Year Logic : 
+```php
+ /* Leapyear logic :
+    1. Divisible by 4 ?
+    2. Divisible by 100 ?
+    3. Divisible by 400 ?
+
+ */
+$year = 1900;
+if ($year % 4  == 0 && $year % 100 == 0 && $year % 400 == 0){
+    echo "{$year} is a leap year";
+}elseif($year % 4  == 0 && $year % 100 == 0){
+    echo "{$year} is not a leap year";
+}elseif($year % 4  == 0){
+    echo "{$year} is a leap year";
+}else{
+    echo "{$year} is not a leap year";
+}
+echo "\n";
+//result : 1900 is not a leap year
+
+
+if($year % 4 == 0 && ($year % 100 !== 0 || $year % 400 == 00 )){
+    echo "{$year} is a leap year";
+}else{
+    echo "{$year} is not a leap year";
+}
+echo "\n";
+//result : 1900 is not a leap year
+```
+Nested Condition : 
+```php
+$condtion1 = false;
+$condtion2 = false;
+$condtion3 = true;
+
+if($condtion1){
+    if($condtion2){
+        if($condtion3){
+            echo "Hello";
+        }else{
+            echo " Hallo 1";
+        }
+    }else{
+        echo "Hallo 2";
+    }
+}else{
+    echo "Hallo 3";
+}
+echo "\n";
+if($condtion1 && $condtion2 && $condtion3){
+    echo "Hello";
+}elseif($condtion1 && $condtion2){
+    echo " Hallo 1";
+}elseif($condtion1){
+    echo "Hallo 2";
+}else {
+    echo "Hallo 3";
+}
+echo "\n";
+```
+### 1.8 Topic : Ternary 
+```php
+$marks = 10;
+if(12 == $marks){
+    echo "twelve";
+}elseif (10 == $marks) {
+   echo "ten";
+}else{
+    echo"this is an unknown number";
+}
+echo "\n";
+print ($marks == 40) ? "pass" :  "fail";
+```
