@@ -409,3 +409,19 @@ if(isEven($x)){ //Arguments
 }
 // Result: 12 is even number
 ```
+
+### 1.13 Make Factorial number with function:
+```php
+function factorial( int $n){
+    $result=1;
+    for($i= $n; $i>1; $i--){
+        $result *=$i;
+    }
+    return $result;
+}
+
+$x=6;
+echo "factorial is $x and ".factorial($x);
+
+// result : factorial is 6 and 720
+```
