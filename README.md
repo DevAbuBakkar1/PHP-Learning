@@ -437,3 +437,15 @@ serve();
 
 // result : 2 cup of tea has/have been served
 ```
+
+### 1.15 Fixed function return type and parametar type
+```php
+
+function sum(int $x,int $y):int {
+    return $x+$y;
+}
+$total=sum(10,20);
+echo "totoal number {$total}";
+
+//result : total number 30
+```
