@@ -425,3 +425,15 @@ echo "factorial is $x and ".factorial($x);
 
 // result : factorial is 6 and 720
 ```
+
+### 1.14 Set default parametar value with function:
+
+```php
+function serve($food="Tea",$items="2 cup"){
+    
+    echo "{$items} of {$food} has/have been served";
+}
+serve();
+
+// result : 2 cup of tea has/have been served
+```
