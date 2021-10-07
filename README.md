@@ -449,3 +449,15 @@ echo "totoal number {$total}";
 
 //result : total number 30
 ```
+### 1.16 accept multiple argument in function:
+```php
+function sum(int ...$n):int{
+ $result=0;
+ for($i=0;$i<count($n);$i++){
+     $result +=$n[$i];
+ }
+ return $result;
+}
+echo sum(10,11,12,20,40);
+// result : 93
+```
