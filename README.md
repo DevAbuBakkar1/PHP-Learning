@@ -389,3 +389,23 @@ some text++
 endif;
 // result : even number some text 
 ```
+
+### 1.12 Determines if the argument even or odd number with function:
+```php
+
+function isEven($n) //Parameters
+{ 
+    if($n %2 ==0){
+        return true;
+    }
+    return false;
+}
+
+$x=12;
+if(isEven($x)){ //Arguments
+   echo "$x is an Even number";
+}else{
+    echo "$x is an Odd number";  
+}
+// Result: 12 is even number
+```
