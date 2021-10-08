@@ -461,3 +461,13 @@ function sum(int ...$n):int{
 echo sum(10,11,12,20,40);
 // result : 93
 ```
+
+### 1.17 How to remove associative array data?
+```php
+$person= array('name'=>'rinku','lname' =>'ali');
+print_r($person);
+
+unset($person["lname"]);
+print_r($person);
+
+```
