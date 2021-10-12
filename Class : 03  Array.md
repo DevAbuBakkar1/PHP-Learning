@@ -162,7 +162,7 @@ $jsonDatadecode = json_decode($jsonData, true);
 print_r($jsonDatadecode);
 echo "\n";
 ```
-### 3.06 Topic : Copy by Value Copy by reference 
+### 3.07 Topic : Copy by Value Copy by reference 
 ```php
 $person = array('fname' => 'hellow', 'lname' => 'world');
 $newperson = $person ;
@@ -176,4 +176,146 @@ function printdata($person){
 }
 printdata($person);
 print_r($person);
+```
+
+### 3.08 Topic : Empty Value Check 
+```php
+$name = '';
+//check is variable set or not 
+if(isset($name)){
+    echo "name variable is set";
+}else{
+    echo "name variable is not set";
+}
+//result : name is set
+
+echo PHP_EOL;
+$name = 0;
+//check variable empty or not 
+if(empty($name)){
+    echo "name is empty";
+}else {
+    echo "His Name is {$name}";
+} // result : name is empty
+//this is problem Solution is :
+
+echo "\n";
+$name = 0;
+if(isset($name) && (is_numeric($name) || $name != '')){
+    echo "name is set and his name is {$name}";
+}else{
+    echo "name is not set and value is empty";
+}
+//result : name is set and his name is 0
+```
+### 3.09 Topic : Array Slice
+```php
+//example or array
+$fruits = array('apple','banana','mango','lichi','dates','palm','orange');
+$somefruits = array_slice($fruits,2); //start from 2
+$somefruits = array_slice($fruits,2,3); // start from 2 and end afeter 3
+$somefruits = array_slice($fruits,2,-1); //start from 2 and end before last 
+$somefruits = array_slice($fruits,-5,-1);// start from -5 and end before last 
+$somefruits = array_slice($fruits,2,-1,true); //start from 2 and end before last also maintin serializie
+print_r($somefruits);
+/* result :
+Array
+(
+    [0] => mango
+    [1] => lichi
+    [2] => dates
+)
+*/
+
+//example of associative array : 
+$anotherfruits = array('a'=>'apple','b'=>'banana', "kola", 23=>34, 'c'=>'mango','d'=>'lichi','e'=>'dates','f'=>'palm','g'=>'orange');
+$randfruits = array_slice($anotherfruits,2, -1, true);
+print_r($randfruits);
+/* result :
+Array
+(
+    [0] => kola
+    [23] => 34
+    [c] => mango
+    [d] => lichi
+    [e] => dates
+    [f] => palm
+)
+*/
+```
+### 3.10 Topic : Array_splice
+```php
+$fruits = array('apple','banana','mango','lichi','dates','palm','orange');
+//separate value from array completely 
+ $splice = array_splice($fruits , 2 , -1);
+ //separate date from value and entry data in the same position
+ $newdata = array('jackfruit', 'tamarind', 'pineapple');
+ $splice = array_splice( $fruits , 2 , -1, $newdata);
+ print_r($splice);
+ print_r($fruits);
+ /*result :
+ Array
+(
+    [0] => mango
+    [1] => lichi
+    [2] => dates
+    [3] => palm
+)
+Array
+(
+    [0] => apple
+    [1] => banana
+    [2] => jackfruit
+    [3] => tamarind
+    [4] => pineapple
+    [5] => orange
+)
+*/
+```
+### 3.09 Topic : Array_merge
+```php 
+$fruits = array('apple','banana','mango','lichi','dates','palm','orange');
+$fruts1 = array_slice($fruits, 1, 3);
+$fruts2 = array_slice($fruits, 4, null ,true);//true is for sencond output 
+
+// output way 01 :
+$newfruits = array_merge($fruts1,$fruts2);
+print_r($fruts1);
+print_r($fruts2);
+print_r($newfruits);
+
+// output way 02 :
+$newfruitsplus = $fruts1 + $fruts2;
+print_r($newfruitsplus);
+
+
+//associative array marge :
+$anotherfruits = array('a'=>'apple','b'=>'banana', "kola", 23=>34, 'c'=>'mango','d'=>'lichi','e'=>'dates','f'=>'palm','g'=>'orange');
+/*this way is not work properly
+$splice_fruit= array_splice($anotherfruits, 2, 2 , array('j' =>"komla", 4 =>5));
+print_r($splice_fruit);
+print_r($anotherfruits);
+*/
+$fruit1 = array_slice($anotherfruits , 0 ,3 ,true);
+$fruts2 = array_slice($anotherfruits , 4 , null , true);
+$fruit3 = array( "new" => "komla", 342=> 3454);
+$final_marge = $fruit1 + $fruts2 + $fruit3 ;
+
+print_r($final_marge);
+/*
+Result :
+Array
+(
+    [a] => apple
+    [b] => banana
+    [0] => kola
+    [c] => mango
+    [d] => lichi
+    [e] => dates
+    [f] => palm
+    [g] => orange
+    [new] => komla
+    [342] => 3454
+)
+*/
 ```
